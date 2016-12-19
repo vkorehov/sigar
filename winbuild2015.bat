@@ -3,7 +3,7 @@
 @echo "Run this from a shell started with the Visual Studio Build environment set!"
 
 @IF DEFINED GENERATOR (GOTO GENERAL_CONF)
-@SET GENERATOR="Visual Studio 14 2015"
+@SET GENERATOR="Visual Studio 14 2015 Win64"
 @GOTO GENERAL_CONF
 
 :GENERAL_CONF
