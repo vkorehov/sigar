@@ -62,3 +62,4 @@ bindings/python/build
 /*.opendb
 /install_manifest.txt
 /x64
+/.idea
