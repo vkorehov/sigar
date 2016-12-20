@@ -86,7 +86,7 @@ if test x$AUTOHEADER = x; then
 fi
 
 run $LIBTOOLIZE $LIBTOOLIZE_FLAGS
-mv ../ltmain.sh ./ltmain.sh
+#mv ../ltmain.sh ./ltmain.sh
 run $ACLOCAL $ACLOCAL_FLAGS
 # we don't need autoheader as we don't have a config.h
 # run $AUTOHEADER
