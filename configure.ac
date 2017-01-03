@@ -124,7 +124,6 @@ src/os/win32/Makefile
 examples/Makefile
 src/sigar_version_autoconf.c
 tests/Makefile
-bindings/Makefile
 ])
 
 AC_OUTPUT

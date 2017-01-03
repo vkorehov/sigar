@@ -12232,7 +12232,7 @@ fi
 
 
 
-ac_config_files="$ac_config_files Makefile include/Makefile src/Makefile src/os/Makefile src/os/aix/Makefile src/os/darwin/Makefile src/os/freebsd/Makefile src/os/hpux/Makefile src/os/linux/Makefile src/os/solaris/Makefile src/os/win32/Makefile examples/Makefile src/sigar_version_autoconf.c tests/Makefile bindings/Makefile"
+ac_config_files="$ac_config_files Makefile include/Makefile src/Makefile src/os/Makefile src/os/aix/Makefile src/os/darwin/Makefile src/os/freebsd/Makefile src/os/hpux/Makefile src/os/linux/Makefile src/os/solaris/Makefile src/os/win32/Makefile examples/Makefile src/sigar_version_autoconf.c tests/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -13303,7 +13303,6 @@ do
     "examples/Makefile") CONFIG_FILES="$CONFIG_FILES examples/Makefile" ;;
     "src/sigar_version_autoconf.c") CONFIG_FILES="$CONFIG_FILES src/sigar_version_autoconf.c" ;;
     "tests/Makefile") CONFIG_FILES="$CONFIG_FILES tests/Makefile" ;;
-    "bindings/Makefile") CONFIG_FILES="$CONFIG_FILES bindings/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
