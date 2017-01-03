@@ -1,4 +1,4 @@
-INCLUDES = @INCLUDES@
+AM_CPPFLAGS = @AM_CPPFLAGS@
 
 SIGAR_OS_SRCS=\
 	darwin_sigar.c

@@ -78,10 +78,10 @@ if test $ac_cv_header_libproc_h = yes; then
         AC_DEFINE(DARWIN_HAS_LIBPROC_H, [1], [sigar named them DARWIN_HAS_... instead of HAVE_])
 fi
 
-INCLUDES="-I\$(top_srcdir)/include -I\$(top_srcdir)/src/os/$SRC_OS $SIGAR_INCLUDES"
+AM_CPPFLAGS="-I\$(top_srcdir)/include -I\$(top_srcdir)/src/os/$SRC_OS $SIGAR_INCLUDES"
 
 AC_SUBST(SRC_OS)
-AC_SUBST(INCLUDES)
+AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(SIGAR_LIBS)
 
 AM_CONDITIONAL(OS_WIN32, test x$SRC_OS = xwin32)

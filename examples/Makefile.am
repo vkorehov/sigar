@@ -1,6 +1,6 @@
 LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
 
-INCLUDES = @INCLUDES@
+AM_CPPFLAGS = @AM_CPPFLAGS@
 
 noinst_PROGRAMS = cpuinfo sigar_ps
 

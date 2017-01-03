@@ -1,4 +1,4 @@
-INCLUDES = @INCLUDES@
+AM_CPPFLAGS = @AM_CPPFLAGS@
 
 SIGAR_OS_SRCS = solaris_sigar.c get_mib2.c kstats.c procfs.c
 

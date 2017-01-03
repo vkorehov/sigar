@@ -1,4 +1,4 @@
-INCLUDES = @INCLUDES@
+AM_CPPFLAGS = @AM_CPPFLAGS@
 
 SIGAR_OS_SRCS = hpux_sigar.c
 
