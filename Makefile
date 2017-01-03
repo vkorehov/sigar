@@ -327,7 +327,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-SUBDIRS = include src bindings examples tests
+SUBDIRS = include src examples tests
 ACLOCAL_AMFLAGS = -I m4
 EXTRA_DIST = \
 	CMakeLists.txt \

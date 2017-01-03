@@ -73,10 +73,14 @@
 
 #if defined(WIN32)
 #   define SIGAR_INLINE __inline
+#   define SIGAR_EXTERN_INLINE
 #elif defined(__GNUC__)
+// make sure it si GCC 5 ready
 #   define SIGAR_INLINE inline
+#   define SIGAR_EXTERN_INLINE extern inline
 #else
 #   define SIGAR_INLINE
+#   define SIGAR_EXTERN_INLINE
 #endif
 
 #ifdef DMALLOC
