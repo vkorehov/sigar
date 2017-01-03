@@ -633,10 +633,6 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
-BUILD_LUA_FALSE
-BUILD_LUA_TRUE
-LUA_LIBS
-LUA_CFLAGS
 USE_VALGRIND_FALSE
 USE_VALGRIND_TRUE
 VALGRIND
@@ -787,7 +783,6 @@ with_gnu_ld
 with_sysroot
 enable_libtool_lock
 with_valgrind
-with_lua
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1452,7 +1447,6 @@ Optional Packages:
   --with-sysroot[=DIR]    Search for dependent libraries within DIR (or the
                           compiler's sysroot if not specified).
   --with-valgrind=binary  run the tests in valgrind to check for mem-leaks
-  --with-lua              lua
 
 Some influential environment variables:
   CC          C compiler command
@@ -12237,51 +12231,8 @@ else
 fi
 
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if with lua" >&5
-$as_echo_n "checking if with lua... " >&6; }
 
-# Check whether --with-lua was given.
-if test "${with_lua+set}" = set; then :
-  withval=$with_lua; WITH_LUA=$withval
-else
-  WITH_LUA=no
-fi
-
-
-if test "$WITH_LUA" != "no"; then
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $WITH_LUA" >&5
-$as_echo "$WITH_LUA" >&6; }
- # try pkgconfig
- if test "$WITH_LUA" = "yes"; then
-    LUAPC=lua
-  else
-    LUAPC=$WITH_LUA
-  fi
-
- PKG_CHECK_MODULES(LUA, $LUAPC >= 5.1,
-   AC_DEFINE([HAVE_LUA], [1], [liblua])
-   AC_DEFINE([HAVE_LUA_H], [1], [lua.h])
- ,
-   PKG_CHECK_MODULES(LUA, lua5.1 >= 5.1, [
-     AC_DEFINE([HAVE_LUA], [1], [liblua])
-     AC_DEFINE([HAVE_LUA_H], [1], [lua.h])
-   ],[WITH_LUA=no])
- )
-
-
-
-fi
-
- if test "$WITH_LUA" != "no"; then
-  BUILD_LUA_TRUE=
-  BUILD_LUA_FALSE='#'
-else
-  BUILD_LUA_TRUE='#'
-  BUILD_LUA_FALSE=
-fi
-
-
-ac_config_files="$ac_config_files Makefile include/Makefile src/Makefile src/os/Makefile src/os/aix/Makefile src/os/darwin/Makefile src/os/freebsd/Makefile src/os/hpux/Makefile src/os/linux/Makefile src/os/solaris/Makefile src/os/win32/Makefile examples/Makefile src/sigar_version_autoconf.c tests/Makefile bindings/Makefile bindings/lua/Makefile"
+ac_config_files="$ac_config_files Makefile include/Makefile src/Makefile src/os/Makefile src/os/aix/Makefile src/os/darwin/Makefile src/os/freebsd/Makefile src/os/hpux/Makefile src/os/linux/Makefile src/os/solaris/Makefile src/os/win32/Makefile examples/Makefile src/sigar_version_autoconf.c tests/Makefile bindings/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -12479,10 +12430,6 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${USE_VALGRIND_TRUE}" && test -z "${USE_VALGRIND_FALSE}"; then
   as_fn_error $? "conditional \"USE_VALGRIND\" was never defined.
-Usually this means the macro was only invoked conditionally." "$LINENO" 5
-fi
-if test -z "${BUILD_LUA_TRUE}" && test -z "${BUILD_LUA_FALSE}"; then
-  as_fn_error $? "conditional \"BUILD_LUA\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 
@@ -13357,7 +13304,6 @@ do
     "src/sigar_version_autoconf.c") CONFIG_FILES="$CONFIG_FILES src/sigar_version_autoconf.c" ;;
     "tests/Makefile") CONFIG_FILES="$CONFIG_FILES tests/Makefile" ;;
     "bindings/Makefile") CONFIG_FILES="$CONFIG_FILES bindings/Makefile" ;;
-    "bindings/lua/Makefile") CONFIG_FILES="$CONFIG_FILES bindings/lua/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
